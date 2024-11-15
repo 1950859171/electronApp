@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import VueRouter from 'unplugin-vue-router/vite'
-import { PrimeVueResolver } from '@primevue/auto-import-resolver'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import UnoCSS from 'unocss/vite'
 // import { VueRouterAutoImports } from 'unplugin-vue-router'
 
@@ -57,7 +57,7 @@ export default defineConfig({
             names: ['RouterLink', 'RouterView']
           }
         ],
-        resolvers: [PrimeVueResolver()]
+        resolvers: [NaiveUiResolver()]
       })
     ]
   }

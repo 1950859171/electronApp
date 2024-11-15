@@ -1,11 +1,18 @@
 <script setup lang="ts">
-// const { themeOverrides, Theme } = useTheme()
-// console.log(navigator.mediaDevices)
+const { themeOverrides, Theme } = useTheme()
+console.log(navigator.mediaDevices)
 </script>
 
 <template>
   <div class="w-full h-full">
-    <Button label="Save" icon="pi pi-check" icon-pos="right"/>
+    <n-config-provider
+      class="w-full h-full"
+      preflight-style-disabled
+      :theme="Theme"
+      :theme-overrides="themeOverrides"
+    >
+      <router-view></router-view>
+    </n-config-provider>
   </div>
 </template>
 
