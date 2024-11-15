@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import { useMessage } from 'naive-ui'
+window.$message = useMessage()
 const { themeOverrides, Theme } = useTheme()
-console.log(navigator.mediaDevices)
 </script>
 
 <template>
@@ -11,7 +12,9 @@ console.log(navigator.mediaDevices)
       :theme="Theme"
       :theme-overrides="themeOverrides"
     >
-      <router-view></router-view>
+      <n-message-provider>
+        <router-view></router-view>
+      </n-message-provider>
     </n-config-provider>
   </div>
 </template>

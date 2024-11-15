@@ -5,13 +5,14 @@ import icon from '../../resources/icon.png?asset'
 import handlerController from './ipcHandler/handlerController'
 function createWindow(): void {
   // Create the browser window.
+  console.log(icon)
   const mainWindow = new BrowserWindow({
     width: 900,
     height: 670,
     minWidth: 900,
     minHeight: 670,
     show: false, //初始不立即显示窗口
-    frame: false,
+    frame: false, //无边框
     // titleBarStyle: 'hidden',
     // titleBarOverlay: true,
     // transparent: true, //创建一个完全透明的窗口
